@@ -1,0 +1,44 @@
+
+=== OPTION PRICING (SYNTHETIC INPUTS) ===
+Call BS 7.1281 | Put BS 9.0248 | MC 7.1455 ± 0.0643 (95% half-width)
+Greeks {'delta': 0.5024132586078932, 'gamma': 0.01994674906534299, 'vega': 39.893498130685984, 'theta': -5.282747648814426, 'rho': 43.113261191527585}
+Synthetic market quote 9.5000 -> implied vol 25.9494%
+
+=== HEDGING COMPARISON ===
+ Cost (bps) Strategy  Rebalance (steps)  Mean P&L  P&L Std  Mean abs P&L  VaR 95% loss  ES 95% loss  Mean transaction cost  Objective
+        0.0  Monthly                 21   -0.0390   2.0305        1.5244        3.3513       4.9124                 0.0000     4.9514
+        0.0   Weekly                  5   -0.0189   0.9869        0.7391        1.6622       2.3450                 0.0000     2.3639
+        0.0    Daily                  1   -0.0040   0.4586        0.3408        0.7611       1.0587                 0.0000     1.0627
+        5.0  Monthly                 21   -0.1443   2.0376        1.5312        3.4761       5.0490                 0.1038     5.1933
+        5.0   Weekly                  5   -0.1876   0.9954        0.7572        1.8741       2.5757                 0.1663     2.7633
+        5.0    Daily                  1   -0.3146   0.4792        0.4332        1.1671       1.4948                 0.3060     1.8094
+       10.0  Monthly                 21   -0.2497   2.0452        1.5437        3.6178       5.1858                 0.2076     5.4355
+       10.0   Weekly                  5   -0.3563   1.0071        0.7992        2.0950       2.8084                 0.3325     3.1647
+       10.0    Daily                  1   -0.6251   0.5221        0.6563        1.5890       1.9461                 0.6119     2.5713
+       20.0  Monthly                 21   -0.4603   2.0623        1.5832        3.8889       5.4616                 0.4152     5.9219
+       20.0   Weekly                  5   -0.6938   1.0399        0.9483        2.5303       3.2781                 0.6651     3.9718
+       20.0    Daily                  1   -1.2463   0.6554        1.2472        2.4811       2.8772                 1.2238     4.1235
+
+=== BEST REBALANCING STRATEGY (COST vs RISK WEIGHT) ===
+Cost (bps)   0.0      5.0      10.0     20.0
+Lambda                                      
+0.00        Daily  Monthly  Monthly  Monthly
+0.25        Daily    Daily   Weekly   Weekly
+0.50        Daily    Daily    Daily   Weekly
+1.00        Daily    Daily    Daily   Weekly
+2.00        Daily    Daily    Daily    Daily
+5.00        Daily    Daily    Daily    Daily
+
+=== PORTFOLIO RISK (PHYSICAL-DRIFT SCENARIOS; ILLUSTRATIVE) ===
+Initial portfolio value: 487.3599
+{'mean_pnl': 2.508, 'std_pnl': 16.759, 'loss_var': 24.9209, 'loss_es': 31.6487, 'loss_probability': 0.4437}
+
+=== SPOT / VOLATILITY STRESS TEST ===
+Spot shock       -0.2   -0.1   0.0    0.1    0.2
+Vol shock (pp)                                  
+-5.0           -61.19 -28.60  3.37  31.87  56.37
+ 0.0           -60.71 -29.26  0.92  28.61  53.60
+ 5.0           -60.80 -30.41 -1.40  25.68  50.76
+ 10.0          -61.33 -31.82 -3.64  22.96  47.98
+
+Charts and CSV reports saved to outputs/.
