@@ -1,3 +1,13 @@
+
+### Live Interactive Dashboard
+
+Explore the Derivatives Pricing & Portfolio Risk Engine through an interactive Streamlit application.
+
+**[Launch the Live Dashboard](https://pietro-quant-finance-engine.streamlit.app/)**
+
+The dashboard features Black–Scholes and Monte Carlo option pricing, Greeks, implied volatility, dynamic Delta hedging, and portfolio risk analytics.
+
+*All market data and scenarios are simulated or hypothetical for research and educational purposes.*
 # Derivatives Pricing & Portfolio Risk Engine
 
 A **reproducible, educational Python research toolkit** for derivatives pricing and scenario-based risk analysis. Built around the Black--Scholes model, European option valuation, implied volatility, Monte Carlo, a discrete delta hedge, and a single-underlying stock/options portfolio.
